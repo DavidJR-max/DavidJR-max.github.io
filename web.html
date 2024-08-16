@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - Formulario de Problemas</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Bienvenidos!</h1>
+        <p>Por favor, describa el problema que persiste en su equipo.</p>
+        
+        <form id="problemForm">
+            <div class="form-group">
+                <label for="title">Título del Problema:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Descripción del Problema:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Adjuntar Imagen:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Método de Contacto:</label>
+                <input type="text" id="contact" name="contact" placeholder="Instagram, teléfono, correo..." required>
+            </div>
+
+            <div class="form-group privacy-group">
+                <label>
+                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                    Acepto la <a href="#" id="privacyLink">política de privacidad</a>.
+                </label>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <!-- Modal para la política de privacidad -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Política de Privacidad</h2>
+            <p>Tu privacidad es importante para nosotros. En esta política de privacidad te explicamos qué datos personales recopilamos, por qué lo hacemos y cómo los usamos. Esta política se aplica a toda la información personal que recopilamos a través de este formulario.</p>
+
+            <h3>Datos Recogidos</h3>
+            <p>Recopilamos los siguientes datos personales cuando envías el formulario:</p>
+            <ul>
+                <li><strong>Nombre:</strong> Para poder dirigirnos a ti de manera adecuada.</li>
+                <li><strong>Datos de contacto:</strong> Como tu correo electrónico, número de teléfono, o tu usuario de redes sociales, para poder comunicarnos contigo.</li>
+                <li><strong>Descripción del problema:</strong> La información que nos proporcionas sobre el problema técnico que estás enfrentando.</li>
+                <li><strong>Imágenes:</strong> Cualquier imagen que adjuntes para ilustrar el problema.</li>
+            </ul>
+
+            <h3>Uso de los Datos</h3>
+            <p>Los datos personales que recopilamos se utilizan únicamente para los siguientes fines:</p>
+            <ul>
+                <li>Responder a tu consulta o problema técnico.</li>
+                <li>Proporcionar soporte y seguimiento hasta la resolución del problema.</li>
+            </ul>
+
+            <h3>Protección de los Datos</h3>
+            <p>Nos comprometemos a proteger tus datos personales. Implementamos medidas de seguridad adecuadas para proteger tu información de accesos no autorizados, alteraciones, divulgaciones o destrucciones.</p>
+
+            <h3>Compartir los Datos</h3>
+            <p>No compartimos tus datos personales con terceros, a menos que sea necesario para cumplir con una ley o regulación, o para proteger nuestros derechos legales.</p>
+
+            <h3>Tus Derechos</h3>
+            <p>Tienes derecho a acceder, rectificar o eliminar tus datos personales en cualquier momento. Si deseas ejercer alguno de estos derechos, por favor, ponte en contacto con nosotros a través de la información de contacto proporcionada.</p>
+
+            <h3>Contacto</h3>
+            <p>Si tienes alguna pregunta sobre esta política de privacidad o sobre cómo manejamos tus datos personales, no dudes en contactarnos a través de <strong>gutshamster@gmail.com</strong>.</p>
+        </div>
+    </div>
+
+    <script src="web.js"></script>
+</body>
+</html>
